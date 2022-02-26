@@ -2,6 +2,16 @@
 
 Cara já vou deixar algumas coisas aqui armazendas para poupar tempo depois rsrsrs
 
+- [Notas de WSL - Windowns subsystem Linux](#notas-de-wsl---windowns-subsystem-linux)
+- [Instalação](#instalação)
+- ['Setar' ip estático](#setar-ip-estático)
+- [Ssh](#ssh)
+  - [Instalar o SSH](#instalar-o-ssh)
+  - [Configuração básica](#configuração-básica)
+  - [Subir serviço](#subir-serviço)
+  - [Gerar chave (Caso de erro de chaves)](#gerar-chave-caso-de-erro-de-chaves)
+  - [Links uteis](#links-uteis)
+
 # Instalação
 
 > Abrir o CMD como administrador
