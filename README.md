@@ -10,14 +10,22 @@ Cara já vou deixar algumas coisas aqui armazendas para poupar tempo depois rsrs
 wsl --install -d Ubuntu
 ```
 
-# Setar ip  Statico
+# 'Setar' ip estático
 
 > Precisa de CMD ou powerShell com privilégio de administrador também
+
+Para deixar como estático mesmo, é necessário criar um arquivo .bat ou .ps1 com o código abaixo
 
 ```cmd
 wsl -d Ubuntu -u root ip addr add 10.0.0.10/24 broadcast 192.168.50.255 dev eth0 label eth0:1
 netsh interface ip add address "vEthernet (WSL)" 192.168.50.88 255.255.255.0
 ```
+
+Coloque esse arquivo no agendador de tarefas, para sempre ser executado no logon.
+
+> Se lembre de setar a opções de 'Executar como provilégios altos' para dar certo
+
+[Fonte dessas informações](https://lifesaver.codes/answer/static-ip-on-wsl-2-418)
 
 # Ssh
 
