@@ -65,7 +65,7 @@ AllowUsers yourusername
 
 ```shell
 sudo service ssh start
-```
+``
 
 ## Gerar chave (Caso de erro de chaves)
 
