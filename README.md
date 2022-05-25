@@ -10,6 +10,7 @@ Cara já vou deixar algumas coisas aqui armazendas para poupar tempo depois rsrs
   - [Configuração básica](#configuração-básica)
   - [Subir serviço](#subir-serviço)
   - [Gerar chave (Caso de erro de chaves)](#gerar-chave-caso-de-erro-de-chaves)
+- [Desligar](#desligar)
 - [Configuções](#configuções)
   - [Links uteis](#links-uteis)
 
@@ -17,7 +18,7 @@ Cara já vou deixar algumas coisas aqui armazendas para poupar tempo depois rsrs
 
 > Abrir o CMD como administrador
 
-```cmd
+```powershell
 wsl --install -d Ubuntu
 ```
 
@@ -27,7 +28,7 @@ wsl --install -d Ubuntu
 
 Para deixar como estático mesmo, é necessário criar um arquivo .bat ou .ps1 com o código abaixo
 
-```cmd
+```powershell
 wsl -d Ubuntu -u root ip addr add 10.0.0.10/24 broadcast 192.168.50.255 dev eth0 label eth0:1
 netsh interface ip add address "vEthernet (WSL)" 192.168.50.88 255.255.255.0
 ```
@@ -66,12 +67,20 @@ AllowUsers yourusername
 
 ```shell
 sudo service ssh start
-``
+```
 
 ## Gerar chave (Caso de erro de chaves)
 
 ```shell
 ssh-keygen -A
+```
+
+# Desligar
+
+Para desligar o WSL é bem simples, abra o cmd e digite o comando abaixo
+
+```powershell
+wsl --shutdown
 ```
 
 # Configuções
