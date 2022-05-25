@@ -10,6 +10,7 @@ Cara já vou deixar algumas coisas aqui armazendas para poupar tempo depois rsrs
   - [Configuração básica](#configuração-básica)
   - [Subir serviço](#subir-serviço)
   - [Gerar chave (Caso de erro de chaves)](#gerar-chave-caso-de-erro-de-chaves)
+- [Configuções](#configuções)
   - [Links uteis](#links-uteis)
 
 # Instalação
@@ -72,6 +73,25 @@ sudo service ssh start
 ```shell
 ssh-keygen -A
 ```
+
+# Configuções
+
+É importante configurar corretamente seu WSL senão ele vai torrar sua memória sem dó quando você usar um docker ou coisa do tipo
+
+Essa configução vale para o Windows, então va até `C:/Users/%username%/` e crie o arquivo `.wslconfig`
+
+Dentro do arquivo você pode fazer cofigurações como essas abaixo para não deixar o WSL consumir todos os seus recursos
+
+```py
+[wsl2]
+memory=20GB # Limits VM memory in WSL 2 
+processors=4 # Makes the WSL 2 VM use 4 virtual processors
+localhostForwarding=true # Boolean specifying if ports bound to wildcard or localhost in the WSL 2 VM should be connectable from the host via localhost:port.
+```
+
+Informações tiradas do link abaixo
+
+https://stackoverflow.com/questions/68706512/how-to-create-a-wslconfig-file
 
 ## Links uteis
 
